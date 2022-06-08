@@ -3,7 +3,7 @@ import { useEffect,useState } from "react";
 import useFetch from "../hooks/useFetch";
 
 const DayList = () => {
-  const days = useFetch("http://localhost:3001/days")
+  const days = useFetch("http://localhost:3003/days")
   return (
     <ul>
       {days.map((day) => (

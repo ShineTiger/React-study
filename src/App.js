@@ -1,17 +1,16 @@
 //import "./styles.css";
-import Header from "./component/Header";
-import { useState } from "react";
-import DayList from "./component/DayList";
 import Day from "./component/Day";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import DayList from "./component/DayList";
+import Header from "./component/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import EmptyPage from "./component/EmptyPage";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <div>
+
         <Header />
-        <Switch>
+        <Routes>
           <Route exact path="/">
             <DayList />
           </Route>
@@ -21,8 +20,8 @@ export default function App() {
           <Route>
             <EmptyPage />
           </Route>
-        </Switch>
-      </div>
+        </Routes>
+
     </BrowserRouter>
   );
 }
